@@ -317,9 +317,9 @@
         <a href="">
           <img class="image3" src="~/assets/ins.png" alt="">
         </a>        <a href="">
-          <img class="image3" src="~/assets/ins.png" alt="">
+          <img class="image3" src="~/assets/face.png" alt="">
         </a>        <a href="">
-          <img class="image3" src="~/assets/twit.png" alt="">
+          <img class="image4" src="~/assets/twit.png" alt="">
         </a>
 
       </div>
@@ -602,6 +602,11 @@ a{
     margin: 0 10px;
   }
 
+  .image4{
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+  }
 
 .reveal {
   opacity: 0;
@@ -703,7 +708,7 @@ a{
 
 }
 
-.slider :hover{
+.slider:hover{
   opacity: 50%;
   transition: opacity 1s;
 }
