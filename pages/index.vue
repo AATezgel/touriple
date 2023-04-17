@@ -734,7 +734,7 @@ a{
   margin: auto;
   overflow: hidden;
   position: relative;
-  width: auto;
+  width: 1000px;
 
 }
 
