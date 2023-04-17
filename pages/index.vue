@@ -1,6 +1,10 @@
 <template>
   
+  
     <div class="wrapper1">
+      <div class="background-illustration">
+          <img class="background-image" src="~/assets/background.png" alt="">
+      </div>
       <div class="header1">
         <div class="logo1">
           <h1 class="sansh1">Touriple ile</h1>
@@ -365,10 +369,26 @@ function reveal() {
 </script>
 
 <style scoped>
-@import url('https://fonts.cdnfonts.com/css/josefin-sans');
-
 
 @media only screen and (max-width: 1600px) {
+  .background-image{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0.1;
+  left: 0;
+  top: 0;
+  width:2735px;
+  height:4576px;
+}
+  .background-illustration {
+  width: 1920px;
+  height: 5000px;
+  position: absolute;
+  left: -90px;
+  top: 10px;
+}
+
   .header1{
     display: flex;
     align-items: center;
@@ -409,6 +429,8 @@ function reveal() {
     border-radius: 50%;
     width: 350px;
     height: 350px;
+    z-index: 1;
+    position: relative;
   }
   .sansh1{
     font-family: 'Josefin Sans',sans-serif;
@@ -469,6 +491,8 @@ function reveal() {
     border-radius: 50%;
     width: auto;
     height: auto;
+    z-index: 1;
+    position: relative;
   }
   .sansh1{
     font-family: 'Josefin Sans';
@@ -513,6 +537,8 @@ a{
     border-radius: 50%;
     width: 360px;
     height: 360px;
+    z-index: 1;
+    position: relative;
   }
 
   .logo2{
@@ -600,12 +626,16 @@ a{
     width: 50px;
     height: 50px;
     margin: 0 10px;
+    z-index: 1;
+    position: relative;
   }
 
   .image4{
     width: 50px;
     height: 50px;
     margin: 0 10px;
+    z-index: 1;
+    position: relative;
   }
 
 .reveal {
