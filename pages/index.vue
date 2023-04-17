@@ -411,7 +411,7 @@ function reveal() {
     height: 350px;
   }
   .sansh1{
-    font-family: 'Josefin Sans';
+    font-family: 'Josefin Sans',sans-serif;
     font-size: 40px;
     font-weight: 500;
     margin: -20px 0;
