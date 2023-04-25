@@ -435,14 +435,14 @@ function reveal() {
   .sansh1{
     font-family: 'Josefin Sans',sans-serif;
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 600;
     margin: -20px 0;
 
   }
   .sans{
     font-family: 'Josefin Sans';
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 100;
     margin: -10px 0;
 
   }
@@ -504,7 +504,7 @@ function reveal() {
   .sans{
     font-family: 'Josefin Sans';
     font-size: 25px;
-    font-weight: 300;
+    font-weight: 100;
     margin: -10px 0;
 
   }

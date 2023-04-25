@@ -16,7 +16,7 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap'}
+      {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap'}
     ]
   },
 
