@@ -93,9 +93,7 @@
 
   }
   .wrapper{
-    
-    max-width: auto;
-    margin: 0 ;
+    max-width: 1920px;
 
   }
   .header{
@@ -108,6 +106,8 @@
     position: fixed;
     width: 100%;   
     z-index: 3; 
+    max-width: 1920px;
+    margin: 0 auto;
 
   }
   .logo{

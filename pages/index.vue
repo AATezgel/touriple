@@ -66,7 +66,7 @@
       <div class="header2">
         <div class="logo2 reveal fade-fade">
 
-          <img class="image2" src="~/assets/ortam3-1.png" alt="">
+          <img class="image2" src="~/assets/kaydır.gif" alt="">
         </div>
         <div class="lang2 reveal fade-down">
 
@@ -140,7 +140,7 @@
 
         <div class="lang1 reveal fade-right">
 
-          <img class="image2" src="~/assets/ortam6.png" alt="">
+          <img class="image2" src="~/assets/elaç.gif" alt="">
           </div>
         
       </div>
@@ -330,6 +330,7 @@
 
 
 
+
     </div>
 
 </template>
@@ -435,7 +436,7 @@ function reveal() {
   .sansh1{
     font-family: 'Josefin Sans',sans-serif;
     font-size: 40px;
-    font-weight: 600;
+    font-weight:400;
     margin: -20px 0;
 
   }
@@ -525,8 +526,9 @@ a{
 
   }
   .wrapper1{
-    max-width: auto;
+    max-width: 1920px;
     margin: 0 ;
+    padding: 0 20px;
 
   }
   .bos1{
