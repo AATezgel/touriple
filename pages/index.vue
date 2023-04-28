@@ -346,7 +346,7 @@ function reveal() {
 
     if (elementTop < windowHeight - elementVisible) {
       reveals[i].classList.add("active");
-    }
+    } 
   }
 }
 
@@ -618,7 +618,7 @@ a{
     margin-left: 0px;
     font-family: 'Josefin Sans';
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 800;
 
   }
 
