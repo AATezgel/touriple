@@ -157,12 +157,13 @@
 
 
       <div class="contack">
-        <h1>Let us contact with you</h1>
+        <img class="mailImage" src="~/assets/Vector.png" alt="">
+        <p class="h1">Let us contact with you</p>
 
         <input class="inputText" type="text" placeholder="Enter Your Email"> <br>
-        <input type="checkbox" id="" name="" value="">
+        <input class="checkbox" type="checkbox" id="" name="" value="">
         <label for="vehicle1">I would like to be informed via this email</label><br>
-        <button class="button2">Send</button>
+        <button class="button2">Confirm</button>
       </div>
 
 
@@ -329,8 +330,6 @@
       </div>
 
 
-
-
     </div>
 
 </template>
@@ -370,6 +369,25 @@ function reveal() {
 </script>
 
 <style scoped>
+
+.checkbox{
+  width: 20px;
+  height: 20px;
+  box-shadow: 1px 1px 0 1px #F73B3B;
+}
+
+.h1{
+  font-weight: 600;
+  font-size: 50px;
+
+}
+.mailImage{
+  width: 120px;
+  opacity: 20%;
+  position: absolute;
+  margin: -10px -60px;
+  filter: blur(2px);
+}
 
 @media only screen and (max-width: 1600px) {
   .background-image{
@@ -433,20 +451,7 @@ function reveal() {
     z-index: 1;
     position: relative;
   }
-  .sansh1{
-    font-family: 'Josefin Sans',sans-serif;
-    font-size: 40px;
-    font-weight:400;
-    margin: -20px 0;
 
-  }
-  .sans{
-    font-family: 'Josefin Sans';
-    font-size: 20px;
-    font-weight: 100;
-    margin: -10px 0;
-
-  }
 
 }
 
@@ -495,20 +500,7 @@ function reveal() {
     z-index: 1;
     position: relative;
   }
-  .sansh1{
-    font-family: 'Josefin Sans';
-    font-size: 40px;
-    font-weight: 500;
-    margin: -20px 0;
 
-  }
-  .sans{
-    font-family: 'Josefin Sans';
-    font-size: 25px;
-    font-weight: 100;
-    margin: -10px 0;
-
-  }
 }
 
 a{
@@ -523,6 +515,23 @@ a{
   margin: 0;
   padding:0;
   
+
+  }
+
+
+
+  .sansh1{
+    font-family: 'Josefin Sans';
+    font-size: 40px;
+    font-weight: 1000;
+    margin: -20px 0;
+
+  }
+  .sans{
+    font-family: 'Josefin Sans';
+    font-size: 25px;
+    font-weight: 100;
+    margin: -10px 0;
 
   }
   .wrapper1{
@@ -579,21 +588,21 @@ a{
   .inputText{
     width: 420px;
     height: 50px;
-    border: 1px solid #000000;
     border-radius: 5px;
     margin: 10px 0;
-    padding: 0 20px;
-    font-size: 16px;
+    padding: 0 80px;
+    font-size: 35px;
+    box-shadow: 0 2px 0 0 #dbdbdb;
   }
   .button2{
-    width: 420px;
-    height: 50px;
-    border: 1px solid #000000;
-    border-radius: 5px;
+    width: 150px;
+    height: 40px;
+    border-radius: 12px;
     margin: 10px 0;
     padding: 0 20px;
-    font-size: 16px;
-    background-color: #000000;
+    font-weight: 800;
+    font-size: 30px;
+    background-color: rgba(49, 156, 255, 1);
     color: #ffffff;
   }
 
