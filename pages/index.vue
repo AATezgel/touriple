@@ -66,7 +66,7 @@
       <div class="header2">
         <div class="logo2 reveal fade-fade">
 
-          <img class="image2" src="~/assets/kaydır.gif" alt="">
+          <img class="image2" src="~/assets/kaydır1.gif" alt="">
         </div>
         <div class="lang2 reveal fade-down">
 
@@ -140,7 +140,7 @@
 
         <div class="lang1 reveal fade-right">
 
-          <img class="image2" src="~/assets/elaç.gif" alt="">
+          <img class="image31" src="~/assets/elaç1.gif" alt="">
           </div>
         
       </div>
@@ -480,6 +480,7 @@ function reveal() {
     margin-right: auto;
     color : #000000;
     padding:0 0;
+    
   }
   .navItems1{
     display: flex;
@@ -545,6 +546,13 @@ a{
   }
 
   .image2{
+    border-radius: 50%;
+    width: 360px;
+    height: 360px;
+    z-index: 1;
+    position: relative;
+  }
+  .image31{
     border-radius: 50%;
     width: 360px;
     height: 360px;

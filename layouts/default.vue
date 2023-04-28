@@ -27,8 +27,8 @@
         </nav>
         <div class="lang">
           <ul class="navItems">
-            <li class="switch1"><a href="#">TR</a></li>
-            <li class="switch2"><a href="#">EN</a></li>
+            <li class="switch1"><a href="#" ref="boldText" @click="makeBold('boldText')">TR</a></li>
+            <li class="switch2"><a href="#" ref="thinText" @click="makeBold('thinText')">EN</a></li>
           </ul>
         </div>
 
@@ -47,8 +47,22 @@
 </template>
 
 <script>
+
   export default{
     name: 'default',
+    methods: {
+      makeBold(elementRef) {
+      const boldText = this.$refs.boldText;
+      const thinText = this.$refs.thinText;
+      if (elementRef === 'boldText') {
+        boldText.style.fontWeight = 'bold';
+        thinText.style.fontWeight = 'normal';
+      } else if (elementRef === 'thinText') {
+        thinText.style.fontWeight = 'bold';
+        boldText.style.fontWeight = 'normal';
+      }
+    }
+  }
   }
 </script>
 
@@ -101,7 +115,6 @@
     align-items: center;
     padding: 0 20px;
     background-color: rgba(49, 156, 255, 1);
-    color: #fff;
     height: 100px;
     position: fixed;
     width: 100%;   
@@ -123,13 +136,19 @@
   .lang{
     margin-left: auto;
     margin-right: auto;
-    color : #fff;
   }
   .navItems{
     display: flex;
     align-items: center;
     margin: 0 0px;
+  }  
+  .tren{
+    font-size: 18;
+    line-height: 23;
+    color: #ffffff;
+    margin: 0 16px;
   }
+
   .navItems li a{
     font-weight: bold;
     font-size: 18;
