@@ -141,16 +141,13 @@
     display: flex;
     align-items: center;
     margin: 0 0px;
+    font-weight: 900;
   }  
-  .tren{
-    font-size: 18;
-    line-height: 23;
-    color: #ffffff;
-    margin: 0 16px;
-  }
+
 
   .navItems li a{
-    font-weight: bold;
+    font-family: 'Josefin Sans';
+    font-weight: 900;
     font-size: 18;
     line-height: 23;
     color: #fff;

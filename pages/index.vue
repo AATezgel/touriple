@@ -522,14 +522,14 @@ a{
   .sansh1{
     font-family: 'Josefin Sans';
     font-size: 40px;
-    font-weight: 1000;
+    font-weight: 500;
     margin: -20px 0;
 
   }
   .sans{
     font-family: 'Josefin Sans';
     font-size: 25px;
-    font-weight: 100;
+    font-weight: 300;
     margin: -10px 0;
 
   }
