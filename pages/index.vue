@@ -2,9 +2,7 @@
   
   
     <div class="wrapper1">
-      <div class="background-illustration">
-          <img class="background-image" src="~/assets/background.png" alt="">
-      </div>
+
       <div class="header1">
         <div class="logo1">
           <h1 class="sansh1">Touriple ile</h1>
@@ -12,6 +10,7 @@
           <h1 class="sansh1">Yapay zeka oluştursun!</h1>
           <br>
           <br>
+          
 
           <p class="sans">Touriple, kişiselleştirilmiş tercihlere göre internetdeki mevcut</p>
           <p class="sans">veritabanlarını yapay zeka ile analiz ederek üretilen olası </p>
@@ -41,7 +40,7 @@
 
       <div class="header2">
         <div class="logo2 reveal fade-right">
-          <h1 class="sansh1">Nasıl Çalışır?</h1>
+          <h1  class="sansh1">Nasıl Çalışır?</h1>
 
           <br>
           <br>
@@ -169,152 +168,6 @@
 
       <br><br><br><br>
 
-      <div class="hizmet">
-        <h1 class="hizmetSaglayici">Hizmet Sağlayıcılar</h1><br><br><br>
-        <div class="slider">
-        <div class="slide-track">
-          <div class="slide">
-            <img src="~/assets/image1.png" alt="">
-          </div>          
-          
-          <div class="slide">
-            <img src="~/assets/image2.png" alt="">
-          </div>          
-          
-          <div class="slide">
-            <img src="~/assets/image3.png" alt="">
-          </div>
-
-          <div class="slide">
-            <img src="~/assets/image4.png" alt="">
-          </div>
-          <div class="slide">
-            <img src="~/assets/image5.png" alt="">
-          </div>
-          <div class="slide">
-            <img src="~/assets/image6.png" alt="">
-          </div>
-          <div class="slide">
-            <img src="~/assets/image7.png" alt="">
-          </div>
-          <div class="slide">
-            <img src="~/assets/image8.png" alt="">
-          </div>    
-          <div class="slide">
-            <img src="~/assets/image9.png" alt="">
-          </div>    
-          <div class="slide">
-            <img src="~/assets/image10.png" alt="">
-          </div>    
-
-          <div class="slide">
-            <img src="~/assets/image1.png" alt="">
-          </div>          
-          
-          <div class="slide">
-            <img src="~/assets/image2.png" alt="">
-          </div>          
-          
-          <div class="slide">
-            <img src="~/assets/image3.png" alt="">
-          </div>
-
-          <div class="slide">
-            <img src="~/assets/image4.png" alt="">
-          </div>
-          <div class="slide">
-            <img src="~/assets/image5.png" alt="">
-          </div>
-          <div class="slide">
-            <img src="~/assets/image6.png" alt="">
-          </div>
-          <div class="slide">
-            <img src="~/assets/image7.png" alt="">
-          </div>
-          <div class="slide">
-            <img src="~/assets/image8.png" alt="">
-          </div>    
-          <div class="slide">
-            <img src="~/assets/image9.png" alt="">
-          </div>    
-          <div class="slide">
-            <img src="~/assets/image10.png" alt="">
-          </div>    
-
-          <div class="slide">
-            <img src="~/assets/image1.png" alt="">
-          </div>          
-          
-          <div class="slide">
-            <img src="~/assets/image2.png" alt="">
-          </div>          
-          
-          <div class="slide">
-            <img src="~/assets/image3.png" alt="">
-          </div>
-
-          <div class="slide">
-            <img src="~/assets/image4.png" alt="">
-          </div>
-          <div class="slide">
-            <img src="~/assets/image5.png" alt="">
-          </div>
-          <div class="slide">
-            <img src="~/assets/image6.png" alt="">
-          </div>
-          <div class="slide">
-            <img src="~/assets/image7.png" alt="">
-          </div>
-          <div class="slide">
-            <img src="~/assets/image8.png" alt="">
-          </div>    
-          <div class="slide">
-            <img src="~/assets/image9.png" alt="">
-          </div>    
-          <div class="slide">
-            <img src="~/assets/image10.png" alt="">
-          </div>    
-
-          <div class="slide">
-            <img src="~/assets/image1.png" alt="">
-          </div>          
-          
-          <div class="slide">
-            <img src="~/assets/image2.png" alt="">
-          </div>          
-          
-          <div class="slide">
-            <img src="~/assets/image3.png" alt="">
-          </div>
-
-          <div class="slide">
-            <img src="~/assets/image4.png" alt="">
-          </div>
-          <div class="slide">
-            <img src="~/assets/image5.png" alt="">
-          </div>
-          <div class="slide">
-            <img src="~/assets/image6.png" alt="">
-          </div>
-          <div class="slide">
-            <img src="~/assets/image7.png" alt="">
-          </div>
-          <div class="slide">
-            <img src="~/assets/image8.png" alt="">
-          </div>    
-          <div class="slide">
-            <img src="~/assets/image9.png" alt="">
-          </div>    
-          <div class="slide">
-            <img src="~/assets/image10.png" alt="">
-          </div>    
-
-        </div>
-
-      </div>
-
-
-      </div>
 
 
 
@@ -329,6 +182,9 @@
 
       </div>
 
+      <div class="background-illustration">
+          <img class="background-image" src="~/assets/background.png" alt="">
+      </div>
 
     </div>
 
@@ -357,6 +213,7 @@ function reveal() {
         msg: 'Welcome to Your Vue.js App'
       }
     },
+    
 
     mounted() {
     reveal();
@@ -387,7 +244,6 @@ function reveal() {
   filter: blur(2px);
 }
 
-@media only screen and (max-width: 1600px) {
   .background-image{
   width: 100%;
   height: 100%;
@@ -395,7 +251,7 @@ function reveal() {
   z-index: 0.1;
   left: 0;
   top: 0;
-  width:2735px;
+  width:145vw;
   height:4576px;
 }
   .background-illustration {
@@ -451,56 +307,8 @@ function reveal() {
   }
 
 
-}
 
-/* Styles for screens larger than 600px */
-@media only screen and (min-width: 1601px) {
-  .header1{
-    display: flex;
-    align-items: center;
-    margin-top: 500px;
-    color: #000000;
-    height: 100px;
 
-  }
-  .logo1{
-    
-    align-items: center;
-    margin:0 -350px;
-    padding: 10px 0px;
-    margin-left: auto;
-    margin-top:-80px;
-
-  }
-
-  .lang1{
-    margin-left: auto;
-    margin-right: auto;
-    color : #000000;
-    padding:0 0;
-    
-  }
-  .navItems1{
-    display: flex;
-    align-items: center;
-    margin: 0 0px;
-  }
-  .navItems1 li a{
-    font-weight: bold;
-    font-size: 18;
-    line-height: 23;
-    color: #000000;
-    margin: 0 16px;
-  }
-  .image{
-    border-radius: 50%;
-    width: auto;
-    height: auto;
-    z-index: 1;
-    position: relative;
-  }
-
-}
 
 a{
     text-decoration: none;
