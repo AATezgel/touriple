@@ -5,14 +5,14 @@
       <div class="header">
         <div class="logo">
           <a href="">
-            <img src="~/assets/logo.png" alt="" height="65" width="219">
+            <img src="~/assets/logo.png" alt="" >
           </a>
         </div>
 
         <nav class="navigation">
           <ul class="navItems">
             <li><a @click="scrollToDiv" >Özellikler</a></li>
-            <li><a >Yardım</a></li>
+            <li><a @click="scrollToDiv2" >Yardım</a></li>
             <li><a href=""></a></li>
             <li><a href=""></a></li>
             <li><a href=""></a></li>
@@ -57,7 +57,7 @@
   <div class="lang1">
 
     <img class="image" src="~/assets/ortam1.png" alt="">
-    </div>
+  </div>
   
 </div>
 
@@ -190,7 +190,7 @@
 
 
 
-<div class="contack">
+<div class="contack" ref="myDiv2">
   <img class="mailImage" src="~/assets/Vector.png" alt="">
   <p class="h1">Let us contact with you</p>
 
@@ -217,17 +217,16 @@
 
 </div>
 
-<div class="background-illustration">
-    <img class="background-image" src="~/assets/background.png" alt="">
+
+
 </div>
 
-</div>
 
 
-    <div class="footer"  >
-      <p class="footer1">2022 Copyright. All Rights Reserved. </p>
 
     </div>
+        <div class="footer"  >
+      <p class="footer1">2022 Copyright. All Rights Reserved. </p>
 
     </div>
   </v-app>
@@ -250,6 +249,7 @@ function reveal() {
 
   export default{
     name: 'default',
+    
     mounted() {
     reveal();
     window.addEventListener("scroll", reveal);
@@ -268,7 +268,14 @@ function reveal() {
       }
     },
     scrollToDiv() {
-      const divPosition = this.$refs.myDiv.offsetTop - 300// mydiv etiketinin üst kenarının pozisyonunu alır
+      const divPosition = this.$refs.myDiv.offsetTop - 250// mydiv etiketinin üst kenarının pozisyonunu alır
+      window.scrollTo({
+        top: divPosition,
+        behavior: "smooth" // animasyonlu kaydırma işlemi yapar
+      })
+    },
+    scrollToDiv2() {
+      const divPosition = this.$refs.myDiv2.offsetTop - 250// mydiv etiketinin üst kenarının pozisyonunu alır
       window.scrollTo({
         top: divPosition,
         behavior: "smooth" // animasyonlu kaydırma işlemi yapar
@@ -284,8 +291,8 @@ function reveal() {
 
 
 .background-illustration {
-  width: 1920px;
-  height: 5000px;
+  width: 100vw;
+  height: 100vh;
   position: absolute;
   z-index: 0.5;
   left: -90px;
@@ -302,15 +309,9 @@ function reveal() {
     list-style-type: none;
 
   }
-  body{
-  height:100vh;
-  margin: 0;
-  padding:0;
-  
 
-  }
   .wrapper{
-    max-width: 1920px;
+    max-width: 100vw;
 
   }
   .header{
@@ -318,11 +319,11 @@ function reveal() {
     align-items: center;
     padding: 0 20px;
     background-color: rgba(49, 156, 255, 1);
-    height: 100px;
+    height: 5.2vw;
     position: fixed;
     width: 100%;   
     z-index: 3; 
-    max-width: 1920px;
+    max-width: 100vw;
     margin: 0 auto;
 
   }
@@ -330,9 +331,11 @@ function reveal() {
 
     display: flex;
     align-items: center;
-    margin: 10px;
-    padding: 10px 0px;
+    margin: 0.52vw;
+    padding: 0.52vw 0px;
     margin-left: auto;
+    width: 11.4vw;
+    height: 3.385vw;
 
   }
 
@@ -345,6 +348,7 @@ function reveal() {
     align-items: center;
     margin: 0 0px;
     font-weight: 900;
+    margin-left: 2.6vw;
   }  
 
 
@@ -365,7 +369,7 @@ function reveal() {
     background-color: rgba(49, 156, 255, 1);
     color: #fff;
     height: 420px;
-    width: 100%;
+    width: 100vw;
     bottom: 0;
     left: 0;
     right: 0;
@@ -390,11 +394,11 @@ function reveal() {
 
 .h1{
   font-weight: 600;
-  font-size: 50px;
+  font-size: 2.6vw;
 
 }
 .mailImage{
-  width: 120px;
+  width: 6.25vw;
   opacity: 20%;
   position: absolute;
   margin: -10px -60px;
@@ -409,7 +413,7 @@ function reveal() {
   left: 0;
   top: 0;
   width:145vw;
-  height:4576px;
+  height:238.3vw;
 }
   .background-illustration {
   width: 1920px;
@@ -422,18 +426,18 @@ function reveal() {
   .header1{
     display: flex;
     align-items: center;
-    margin-top: 500px;
+    margin-top: 26vw;
     color: #000000;
-    height: 100px;
+    height: 5.2vw;
 
   }
   .logo1{
     
     align-items: center;
-    margin:0 -250px;
-    padding: 10px 0px;
+    margin:0 -13vw;
+    padding: 0.5vw 0px;
     margin-left: auto;
-    margin-top:-80px;
+    margin-top:-4.2vw;
 
   }
 
@@ -457,8 +461,8 @@ function reveal() {
   }
   .image{
     border-radius: 50%;
-    width: 350px;
-    height: 350px;
+    width: 20.83vw;
+    height: 20.83vw;
     z-index: 1;
     position: relative;
   }
@@ -474,26 +478,20 @@ a{
     list-style-type: none;
 
   }
-  body{
-  height:100vh;
-  margin: 0;
-  padding:0;
-  
 
-  }
 
 
 
   .sansh1{
     font-family: 'Josefin Sans';
-    font-size: 40px;
+    font-size: 2.1vw;
     font-weight: 500;
     margin: -20px 0;
 
   }
   .sans{
     font-family: 'Josefin Sans';
-    font-size: 25px;
+    font-size: 1.3vw;
     font-weight: 300;
     margin: -10px 0;
 
@@ -505,20 +503,20 @@ a{
 
   }
   .bos1{
-    margin: 800px 0;
+    margin: 41.6vw 0;
   }
 
   .image2{
     border-radius: 50%;
-    width: 360px;
-    height: 360px;
+    width: 18.5vw;
+    height: 18.5vw;
     z-index: 1;
     position: relative;
   }
   .image31{
     border-radius: 50%;
-    width: 360px;
-    height: 360px;
+    width: 18.5vw;
+    height: 18.5vw;
     z-index: 1;
     position: relative;
   }
@@ -566,13 +564,13 @@ a{
     box-shadow: 0 2px 0 0 #dbdbdb;
   }
   .button2{
-    width: 150px;
-    height: 40px;
+    width: 7.8vw;
+    height: 2.1vw;
     border-radius: 12px;
     margin: 10px 0;
     padding: 0 20px;
     font-weight: 800;
-    font-size: 30px;
+    font-size: 1.56vw;
     background-color: rgba(49, 156, 255, 1);
     color: #ffffff;
   }
@@ -583,16 +581,16 @@ a{
     margin-left: 0px;
     font-family: 'Josefin Sans';
     font-size: 40px;
-    font-weight: 800;
+    font-weight: 500;
 
   }
 
   .header2{
     display: flex;
     align-items: center;
-    margin-top: 400px;
+    margin-top: 20.8vw;
     color: #000000;
-    height: 100px;
+    height: 5.2vw;
 
   }
 
@@ -711,49 +709,4 @@ a{
 }
 
 
-.slider{
-  height: 100px;
-  margin: auto;
-  overflow: hidden;
-  position: relative;
-  width: 1000px;
-
-}
-
-.slider:hover{
-  opacity: 50%;
-  transition: opacity 1s;
-}
-
-.slider .slide-track{
-  animation: scroll 10s linear infinite;
-  display: flex;
-  width: calc(250px * 14);
-}
-.slider .slide-track:hover{
-  animation-play-state: paused;
-}
-
-
-.slider .slide{
-  height: 100px;
-  width: auto;
-}
-
-.slider img{
-  height: auto;
-  width: auto;
-  padding: 0 20px;
-}
-
-.hizmetSaglayici{
-  margin: 0 0;
-  padding: 0 0;
-  text-align: center;
-  font-family: 'Josefin Sans';
-  font-size: 50px;
-  font-weight: 700;
-  margin-top: 100px;
-
-}
 </style>
