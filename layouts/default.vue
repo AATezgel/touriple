@@ -27,7 +27,7 @@
         </nav>
         <div class="lang">
           <ul class="navItems">
-            <li class="switch1"><a  ref="boldText" @click="makeBold('boldText')">TR</a></li>
+            <li class="switch1"><a  ref="boldText"  @click="makeBold('boldText')">TR</a></li>
             <li class="switch2"><a  ref="thinText" @click="makeBold('thinText')">EN</a></li>
           </ul>
         </div>
@@ -40,17 +40,17 @@
 
 <div class="header1">
   <div class="logo1">
-    <h1 class="sansh1">Touriple ile</h1>
-    <h1 class="sansh1">En uygun turu</h1>
-    <h1 class="sansh1">Yapay zeka oluştursun!</h1>
+    <h1 class="sansh1">{{ $t('yazi1') }}</h1>
+    <h1 class="sansh1">{{ $t('yazi2') }}</h1>
+    <h1 class="sansh1">{{ $t('yazi3') }}</h1>
     <br>
     <br>
     
 
-    <p class="sans">Touriple, kişiselleştirilmiş tercihlere göre internetdeki mevcut</p>
-    <p class="sans">veritabanlarını yapay zeka ile analiz ederek üretilen olası </p>
-    <p class="sans">rotalardan bütçeniz için en uygun olanını hesaplayan bir gezi </p>
-    <p class="sans">planlama motorudur.</p>
+    <p class="sans">{{ $t('yazi4') }}</p>
+    <p class="sans">{{ $t('yazi5') }}</p>
+    <p class="sans">{{ $t('yazi6') }}</p>
+    <p class="sans">{{ $t('yazi7') }}</p>
 
   </div>
 
@@ -260,9 +260,11 @@ function reveal() {
       const boldText = this.$refs.boldText;
       const thinText = this.$refs.thinText;
       if (elementRef === 'boldText') {
+        this.$i18n.locale = 'en'
         boldText.style.fontWeight = 'bold';
         thinText.style.fontWeight = 'normal';
       } else if (elementRef === 'thinText') {
+        this.$i18n.locale = 'tr'
         thinText.style.fontWeight = 'bold';
         boldText.style.fontWeight = 'normal';
       }

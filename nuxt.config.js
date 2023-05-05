@@ -1,6 +1,7 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - touriple',
@@ -22,6 +23,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -41,7 +43,47 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    'nuxt-i18n',
   ],
+
+  i18n: {
+    locales: ['en', 'fr', 'es'],
+    defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'en',
+      messages: {
+        en: {
+          yazi1: 'Touriple ile',
+          yazi2: 'En uygun turu',
+          yazi3: 'Yapay zeka oluştursun!',
+          yazi4: 'Touriple, kişiselleştirilmiş tercihlere göre internetdeki mevcut',
+          yazi5: 'veritabanlarını yapay zeka ile analiz ederek üretilen olası ',
+          yazi6: 'rotalardan bütçeniz için en uygun olanını hesaplayan bir gezi',
+          yazi7: 'planlama motorudur.',
+          yazi8: 'Touriple ile',
+          yazi9: 'Touriple ile',
+          yazi10: 'Touriple ile',
+          yazi11: 'Touriple ile',
+          yazi12: 'Touriple ile',
+        },
+        tr: {
+          yazi1: 'Let Artificial intelligence',
+          yazi2: 'create Your tour ',
+          yazi3: 'with Touriple!',
+          yazi4: 'Touriple is a trip planning engine that calculates the most',
+          yazi5: 'suitable route for your budget from the possible routes produced',
+          yazi6: 'by analyzing the existing databases on the internet with artificial',
+          yazi7: 'intelligence according to personalized preferences.',
+          yazi8: 'Touriple ile',
+          yazi9: 'Touriple ile',
+          yazi10: 'Touriple ile',
+          yazi11: 'Touriple ile',
+          yazi12: 'Touriple ile',
+        },
+
+      },
+    },
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
