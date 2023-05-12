@@ -11,8 +11,8 @@
 
         <nav class="navigation">
           <ul class="navItems">
-            <li><a @click="scrollToDiv" >Özellikler</a></li>
-            <li><a @click="scrollToDiv2" >Yardım</a></li>
+            <li><a @click="scrollToDiv" >{{ $t('bas1') }}</a></li>
+            <li><a @click="scrollToDiv2" >{{ $t('bas2') }}</a></li>
             <li><a href=""></a></li>
             <li><a href=""></a></li>
             <li><a href=""></a></li>
@@ -45,7 +45,6 @@
     <h1 class="sansh1">{{ $t('yazi3') }}</h1>
     <br>
     <br>
-    
 
     <p class="sans">{{ $t('yazi4') }}</p>
     <p class="sans">{{ $t('yazi5') }}</p>
@@ -57,7 +56,7 @@
   <div class="lang1">
 
     <img class="image" src="~/assets/ortam1.png" alt="">
-  </div>
+  </div>  
   
 </div>
 
@@ -75,12 +74,12 @@
 
 <div class="header2"  ref="myDiv">
   <div class="logo2 reveal fade-right">
-    <h1  class="sansh1">Nasıl Çalışır?</h1>
+    <h1  class="sansh1">{{ $t('yazi8') }}</h1>
 
     <br>
     <br>
-    <p class="sans">Ziyaret edeceğiniz şehirleri ve gidiş - dönüş</p>
-    <p class="sans">tarihlerini belirleyin.</p>
+    <p class="sans">{{ $t('yazi9') }}</p>
+    <p class="sans">{{ $t('yazi10') }}</p>
   </div>
 
   <div class="lang1 reveal fade-down">
@@ -104,8 +103,8 @@
   </div>
   <div class="lang2 reveal fade-down">
 
-    <p class="sans">Konaklama ve ulaşım ile ilgili özelleştirilmiş </p>
-    <p class="sans">kişisel tercihlerinizi belirtin.</p>
+    <p class="sans">{{ $t('yazi11') }}</p>
+    <p class="sans">{{ $t('yazi12') }}</p>
   </div>
 </div>
 
@@ -115,10 +114,10 @@
 <div class="header2 reveal fade-down">
   <div class="logo2">
 
-    <p class="sans">Touriple robotu sizin için optimum güzergahı  </p>
-    <p class="sans">hesaplasın. Size de sadece size sunulan gezi</p>
-    <p class="sans">planındaki linklere tıklayarak satın alma</p>
-    <p class="sans">işlemi kalsın.</p>
+    <p class="sans">{{ $t('yazi13') }}</p>
+    <p class="sans">{{ $t('yazi14') }}</p>
+    <p class="sans">{{ $t('yazi15') }}</p>
+    <p class="sans">{{ $t('yazi16') }}</p>
 
 
   </div>
@@ -140,17 +139,17 @@
 <div class="header2">
 
   <div class="logo2 reveal fade-left">
-    <h1 class="neden">Neden Touriple ?</h1> <br> <br>
+    <h1 class="neden">{{ $t('yazi17') }}</h1> <br> <br>
 
 
     <img class="image2" src="~/assets/ortam5-1.png" alt="">
   </div>
   <div class="lang2 reveal fade-right">
-    <p class="sans">Touriple, size uygun optimum seyahat rotası</p>
-    <p class="sans">için yapay zeka ile internette en çok </p>
-    <p class="sans">kullanılan seyahat uygulamalarını </p>
-    <p class="sans">birleştirerek gerekli herşeyi tek noktada </p>
-    <p class="sans">topluyor.</p>
+    <p class="sans">{{ $t('yazi18') }}</p>
+    <p class="sans">{{ $t('yazi19') }}</p>
+    <p class="sans">{{ $t('yazi20') }}</p>
+    <p class="sans">{{ $t('yazi21') }}</p>
+    <p class="sans">{{ $t('yazi22') }}</p>
   </div>
 </div>
 
@@ -160,15 +159,15 @@
 
 <div class="header2">
   <div class="logo2 reveal fade-left">
-    <p class="sans">Böylelikle gitmek istediğiniz yerleri </p>
-    <p class="sans">barındıran en uygun rotayı bulmak için farklı </p>
-    <p class="sans">yerlerde araştırmaya gerek olmaksızın kendi </p>
-    <p class="sans">turunuzu kendiniz oluşturmuş olursunuz. </p>
-    <p class="sans">Kişiselleştirme tercihlerinizi kullanan </p>
-    <p class="sans">algoritma sonucunda sizlere sunulacak en </p>
-    <p class="sans">uygun rota üzerindeki ulaşım ve konaklama </p>
-    <p class="sans">satın almalarını yine internetteki mevcut </p>
-    <p class="sans">uygulamalardan alabileceksiniz.</p>
+    <p class="sans">{{ $t('yazi23') }}</p>
+    <p class="sans">{{ $t('yazi24') }}</p>
+    <p class="sans">{{ $t('yazi25') }}</p>
+    <p class="sans">{{ $t('yazi26') }}</p>
+    <p class="sans">{{ $t('yazi27') }}</p>
+    <p class="sans">{{ $t('yazi28') }}</p>
+    <p class="sans">{{ $t('yazi29') }}</p>
+    <p class="sans">{{ $t('yazi30') }}</p>
+    <p class="sans">{{ $t('yazi31') }}</p>
 
   </div>
 
