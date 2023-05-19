@@ -2,15 +2,18 @@
   <v-app dark>
     <div class="wrapper">
 
-      <div class="header">
+      <div :class="[isScrolled ? 'headerScroll' : 'header']">
         <div class="logo">
           <a href="">
-            <img src="~/assets/logo.png" alt="" >
+            <img src="" alt="" >
+            <img :src="isScrolled ? require('@/assets/logo1.svg') : require('@/assets/logo.png')" alt="" :style="isScrolled ? 'width: 12.4vw ;margin-top:-0.78vw' : 'width: 12.4vw ; margin-top:-0.78vw'"/>
+            <!-- <img :src="isScrolled ? '~/assets/logo.png' : '~/assets/logo.png'" alt="Resim" > -->
+
           </a>
         </div>
 
-        <nav class="navigation">
-          <ul class="navItems">
+        <nav class="navigation" >
+          <ul :class="[isScrolled ? 'navItemsScroll' : 'navItems']">
             <li><a @click="scrollToDiv" >{{ $t('bas1') }}</a></li>
             <li><a @click="scrollToDiv2" >{{ $t('bas2') }}</a></li>
             <li><a href=""></a></li>
@@ -26,7 +29,7 @@
           </ul>
         </nav>
         <div class="lang">
-          <ul class="navItems">
+          <ul :class="[isScrolled ? 'navItemsScroll' : 'navItems']">
             <li class="switch1"><a  ref="boldText"  @click="makeBold('boldText')">TR</a></li>
             <li class="switch2"><a  ref="thinText" @click="makeBold('thinText')">EN</a></li>
           </ul>
@@ -195,7 +198,7 @@
 
   <input class="inputText" type="text" placeholder="Enter Your Email"> <br>
   <input class="checkbox" type="checkbox" id="" name="" value="">
-  <label for="vehicle1">I would like to be informed via this email</label><br>
+  <label class="" for="vehicle1">I would like to be informed via this email</label><br>
   <button class="button2">Confirm</button>
 </div>
 
@@ -205,7 +208,7 @@
 
 
 
-<div class="socialMedia">
+<!--  <div class="socialMedia">
   <a href="">
     <img class="image3" src="~/assets/ins.png" alt="">
   </a>        <a href="">
@@ -214,7 +217,8 @@
     <img class="image4" src="~/assets/twit.png" alt="">
   </a>
 
-</div>
+</div> -->
+
 
 
 
@@ -248,13 +252,30 @@ function reveal() {
 
   export default{
     name: 'default',
+    data() {
+    return {
+      isScrolled: false
+    }
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
     
     mounted() {
     reveal();
     window.addEventListener("scroll", reveal);
+    window.addEventListener("scroll", this.handleScroll);
 
   },
+  
     methods: {
+      handleScroll() {
+      if (window.scrollY > 50) { // Az bir miktar aşağıya kaydırıldığında değişim gerçekleşecekse 50 değerini ayarlayabilirsiniz
+        this.isScrolled = true
+      } else {
+        this.isScrolled = false
+      }
+    },
       makeBold(elementRef) {
       const boldText = this.$refs.boldText;
       const thinText = this.$refs.thinText;
@@ -328,6 +349,21 @@ function reveal() {
     margin: 0 auto;
 
   }
+
+
+  .headerScroll{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    background-color: rgb(255, 255, 255);
+    height: 5.2vw;
+    position: fixed;
+    width: 100%;   
+    z-index: 3; 
+    max-width: 100vw;
+    margin: 0 auto;
+
+  }
   .logo{
 
     display: flex;
@@ -336,7 +372,6 @@ function reveal() {
     padding: 0.52vw 0px;
     margin-left: auto;
     width: 11.4vw;
-    height: 3.385vw;
 
   }
 
@@ -359,6 +394,26 @@ function reveal() {
     font-size: 18;
     line-height: 23;
     color: #fff;
+    margin: 0 16px;
+  }
+
+
+
+  .navItemsScroll{
+    display: flex;
+    align-items: center;
+    margin: 0 0px;
+    font-weight: 900;
+    margin-left: 2.6vw;
+  }  
+
+
+  .navItemsScroll li a{
+    font-family: 'Josefin Sans';
+    font-weight: 900;
+    font-size: 18;
+    line-height: 23;
+    color: rgba(49, 156, 255, 1);
     margin: 0 16px;
   }
 
@@ -402,8 +457,8 @@ function reveal() {
   width: 6.25vw;
   opacity: 20%;
   position: absolute;
-  margin: -10px -60px;
-  filter: blur(2px);
+  margin: -0.52vw -3.125vw;
+  filter: blur(1px);
 }
 
   .background-image{
@@ -569,7 +624,7 @@ a{
     height: 2.1vw;
     border-radius: 12px;
     margin: 10px 0;
-    padding: 0 20px;
+    padding: 0 1.04vw;
     font-weight: 800;
     font-size: 1.56vw;
     background-color: rgba(49, 156, 255, 1);
@@ -581,7 +636,7 @@ a{
     padding: 0 0;
     margin-left: 0px;
     font-family: 'Josefin Sans';
-    font-size: 40px;
+    font-size: 2.1vw;
     font-weight: 500;
 
   }
