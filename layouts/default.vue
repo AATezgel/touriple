@@ -9,7 +9,7 @@
         <div class="logo">
           <a href="">
             <img src="" alt="" >
-            <img :src="isScrolled ? require('@/assets/logo1.svg') : require('@/assets/logo.png')" alt="" :style="isScrolled ? 'width: 12.4vw ;margin-top:-0.78vw' : 'width: 12.4vw ; margin-top:-0.78vw'"/>
+            <img :src="isScrolled ? require('@/assets/logo1.svg') : require('@/assets/logo3.svg')" alt="" :style="isScrolled ? 'width: 12.4vw ;margin-top:-0.78vw' : 'width: 12.4vw ; margin-top:-0.78vw'"/>
             <!-- <img :src="isScrolled ? '~/assets/logo.png' : '~/assets/logo.png'" alt="Resim" > -->
 
           </a>
@@ -465,11 +465,11 @@ function reveal() {
   left: 0;
   top: 0;
   width:145vw;
-  height:238.3vw;
+  height:255vw;
 }
   .background-illustration {
   width: 1920px;
-  height: 5000px;
+  height: 255vw;
   position: absolute;
   left: -90px;
   top: 10px;
