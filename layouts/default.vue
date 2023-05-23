@@ -1,6 +1,9 @@
 <template>
   <v-app dark>
     <div class="wrapper">
+      <div class="background-illustration">
+        <img class="background-image" src="~/assets/background.png" alt="">
+      </div>
 
       <div :class="[isScrolled ? 'headerScroll' : 'header']">
         <div class="logo">
@@ -16,16 +19,6 @@
           <ul :class="[isScrolled ? 'navItemsScroll' : 'navItems']">
             <li><a @click="scrollToDiv" >{{ $t('bas1') }}</a></li>
             <li><a @click="scrollToDiv2" >{{ $t('bas2') }}</a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-
-            <li><a href=""></a></li>
-
-
-
           </ul>
         </nav>
         <div class="lang">
@@ -281,12 +274,12 @@ function reveal() {
       const thinText = this.$refs.thinText;
       if (elementRef === 'boldText') {
         this.$i18n.locale = 'en'
-        boldText.style.fontWeight = 'bold';
-        thinText.style.fontWeight = 'normal';
+        boldText.style.fontWeight = '900';
+        thinText.style.fontWeight = '300';
       } else if (elementRef === 'thinText') {
         this.$i18n.locale = 'tr'
-        thinText.style.fontWeight = 'bold';
-        boldText.style.fontWeight = 'normal';
+        thinText.style.fontWeight = '900';
+        boldText.style.fontWeight = '300';
       }
     },
     scrollToDiv() {
@@ -310,7 +303,10 @@ function reveal() {
 <style>
 
 
+.switch2{
+  font-weight: 300;
 
+}
 
 .background-illustration {
   width: 100vw;
@@ -362,8 +358,10 @@ function reveal() {
     z-index: 3; 
     max-width: 100vw;
     margin: 0 auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Gölge efekti */
+    
 
-  }
+  } 
   .logo{
 
     display: flex;
@@ -390,7 +388,6 @@ function reveal() {
 
   .navItems li a{
     font-family: 'Josefin Sans';
-    font-weight: 900;
     font-size: 18;
     line-height: 23;
     color: #fff;
@@ -410,7 +407,6 @@ function reveal() {
 
   .navItemsScroll li a{
     font-family: 'Josefin Sans';
-    font-weight: 900;
     font-size: 18;
     line-height: 23;
     color: rgba(49, 156, 255, 1);
@@ -540,16 +536,19 @@ a{
 
   .sansh1{
     font-family: 'Josefin Sans';
-    font-size: 2.1vw;
-    font-weight: 500;
+    font-size: 1.8vw;
+    font-weight: 400;
     margin: -20px 0;
+    line-height: 3.4vw;
+
 
   }
   .sans{
     font-family: 'Josefin Sans';
-    font-size: 1.3vw;
+    font-size: 1.28vw;
     font-weight: 300;
     margin: -10px 0;
+    line-height: 0.8;
 
   }
   .wrapper1{
@@ -684,19 +683,19 @@ a{
 
 
 .active.fade-up {
-  animation: fade-up 1s ease-in;
+  animation: fade-up 0.4s ease-in;
 }
 .active.fade-fade {
-  animation: fade-fade 1s ease-in;
+  animation: fade-fade 0.4s ease-in;
 }
 .active.fade-down {
-  animation: fade-down 1s ease-in;
+  animation: fade-down 0.4s ease-in;
 }
 .active.fade-left {
-  animation: fade-left 1s ease-in;
+  animation: fade-left 0.4s ease-in;
 }
 .active.fade-right {
-  animation: fade-right 1s ease-in;
+  animation: fade-right 0.4s ease-in;
 }
 @keyframes fade-up {
   0% {
