@@ -308,14 +308,6 @@ function reveal() {
 
 }
 
-.background-illustration {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  z-index: 0.5;
-  left: -90px;
-  top: 10px;
-}
 
 
 
@@ -330,6 +322,7 @@ function reveal() {
 
   .wrapper{
     max-width: 100vw;
+    z-index: 1;
 
   }
   .header{
@@ -343,6 +336,8 @@ function reveal() {
     z-index: 3; 
     max-width: 100vw;
     margin: 0 auto;
+    transition: background-color 0.4s;
+
 
   }
 
@@ -359,6 +354,8 @@ function reveal() {
     max-width: 100vw;
     margin: 0 auto;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Gölge efekti */
+    transition: background-color 0.4s;
+
     
 
   } 
@@ -441,13 +438,14 @@ function reveal() {
 .checkbox{
   width: 20px;
   height: 20px;
-  box-shadow: 1px 1px 0 1px #F73B3B;
+  box-shadow: 0 0 1px 1px #F73B3B;
+  z-index: 1;
 }
 
 .h1{
   font-weight: 600;
   font-size: 2.6vw;
-
+  z-index: 1;
 }
 .mailImage{
   width: 6.25vw;
@@ -455,6 +453,7 @@ function reveal() {
   position: absolute;
   margin: -0.52vw -3.125vw;
   filter: blur(1px);
+  z-index: 1;
 }
 
   .background-image{
@@ -467,13 +466,16 @@ function reveal() {
   width:145vw;
   height:255vw;
 }
-  .background-illustration {
-  width: 1920px;
-  height: 255vw;
+
+.background-illustration {
+  width: 100vw;
+  height: 100vh;
   position: absolute;
+  z-index: 0.5;
   left: -90px;
   top: 10px;
 }
+
 
   .header1{
     display: flex;
@@ -555,6 +557,7 @@ a{
     max-width: 1920px;
     margin: 0 ;
     padding: 0 20px;
+    z-index: 1;
 
   }
   .bos1{
@@ -602,6 +605,8 @@ a{
     font-family: 'Josefin Sans';
     font-weight: 400;
     font-size: 20px;
+    z-index: 1;
+    position: relative;
   }
 
 
@@ -617,6 +622,7 @@ a{
     padding: 0 80px;
     font-size: 35px;
     box-shadow: 0 2px 0 0 #dbdbdb;
+    z-index: 1;
   }
   .button2{
     width: 7.8vw;
@@ -628,6 +634,7 @@ a{
     font-size: 1.56vw;
     background-color: rgba(49, 156, 255, 1);
     color: #ffffff;
+    z-index: 1;
   }
 
   .neden{
