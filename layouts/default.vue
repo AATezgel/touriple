@@ -189,7 +189,7 @@
   <img class="mailImage" src="~/assets/Vector.png" alt="">
   <p class="h1">Let us contact with you</p>
 
-  <input class="inputText" type="text" placeholder="Enter Your Email"> <br>
+  <input class="inputText" type="text" :placeholder="placeholderText" @focus="removePlaceholder" @blur="addPlaceholder"> <br>
   <input class="checkbox" type="checkbox" id="" name="" value="">
   <label class="" for="vehicle1">I would like to be informed via this email</label><br>
   <button class="button2">Confirm</button>
@@ -247,7 +247,8 @@ function reveal() {
     name: 'default',
     data() {
     return {
-      isScrolled: false
+      isScrolled: false,
+      placeholderText: 'Buraya yazın'
     }
   },
   beforeDestroy() {
@@ -262,6 +263,12 @@ function reveal() {
   },
   
     methods: {
+      removePlaceholder() {
+      this.placeholderText = '';
+    },
+    addPlaceholder() {
+      this.placeholderText = 'Enter Your Email';
+    },
       handleScroll() {
       if (window.scrollY > 50) { // Az bir miktar aşağıya kaydırıldığında değişim gerçekleşecekse 50 değerini ayarlayabilirsiniz
         this.isScrolled = true
