@@ -248,7 +248,7 @@ function reveal() {
     data() {
     return {
       isScrolled: false,
-      placeholderText: 'Buraya yazın'
+      placeholderText: 'Enter Your Email'
     }
   },
   beforeDestroy() {
@@ -627,7 +627,7 @@ a{
     border-radius: 5px;
     margin: 10px 0;
     padding: 0 80px;
-    font-size: 35px;
+    font-size: 30px;
     box-shadow: 0 2px 0 0 #dbdbdb;
     z-index: 1;
   }
