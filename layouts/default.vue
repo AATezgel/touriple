@@ -195,7 +195,7 @@
   <span class="checkmark"></span>
   I would like to be informed via this email
 </label><br>
-  <button @click="makeEmailSaved" class="button2">Confirm</button>
+  <button @click="makeEmailSaved"  :class="[savedEmail ? 'button2-2' : 'button2']">Confirm</button>
   <p v-if="this.savedEmail" class="email-saved">Email has been saved</p>
   <p v-if="!this.savedEmail" class="email-saved">&nbsp;</p>
 
@@ -725,6 +725,19 @@ a{
     font-weight: 500;
     font-size: 1.56vw;
     background-color: rgba(49, 156, 255, 1);
+    color: #ffffff;
+    z-index: 1;
+  }
+
+  .button2-2{
+    width: 7.8vw;
+    height: 2.1vw;
+    margin-top: -20px;
+    border-radius: 12px;
+    padding: 0 1.04vw;
+    font-weight: 500;
+    font-size: 1.56vw;
+    background-color: #C4CABC;
     color: #ffffff;
     z-index: 1;
   }
