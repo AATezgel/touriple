@@ -190,9 +190,15 @@
   <p class="h1">Let us contact with you</p>
 
   <input class="inputText" type="text" :placeholder="placeholderText" @focus="removePlaceholder" @blur="addPlaceholder"> <br>
-  <input class="checkbox" type="checkbox" id="" name="" value="">
-  <label class="" for="vehicle1">I would like to be informed via this email</label><br>
-  <button class="button2">Confirm</button>
+  <label class="checkbox-container">
+  <input type="checkbox">
+  <span class="checkmark"></span>
+  I would like to be informed via this email
+</label><br>
+  <button @click="makeEmailSaved" class="button2">Confirm</button>
+  <p v-if="this.savedEmail" class="email-saved">Email has been saved</p>
+  <p v-if="!this.savedEmail" class="email-saved">&nbsp;</p>
+
 </div>
 
 
@@ -248,7 +254,12 @@ function reveal() {
     data() {
     return {
       isScrolled: false,
-      placeholderText: 'Enter Your Email'
+      placeholderText: 'Enter Your Email',
+      savedEmail: false,
+      isChecked: false,
+      checkboxColor: 'red',
+
+
     }
   },
   beforeDestroy() {
@@ -263,6 +274,10 @@ function reveal() {
   },
   
     methods: {
+      makeEmailSaved() {
+      this.savedEmail = true;
+    },
+
       removePlaceholder() {
       this.placeholderText = '';
     },
@@ -310,14 +325,84 @@ function reveal() {
 <style>
 
 
-.switch2{
-  font-weight: 300;
 
+
+
+
+
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Yatayda ortalamak için */
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.checkbox-container input[type="checkbox"] {
+  display: none;
+
+}
+
+.checkmark {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-top: -6px;
+  margin-right: 16px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  border-color: #ff0000;
+  background-color: #fff;
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.25);
+}
+
+.checkbox-container input[type="checkbox"]:checked + .checkmark::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 14px;
+  border: solid red;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin-left: 5px;
 }
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+.email-saved{
+  font-size: 0.8em;
+  color: #52E35D;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.switch2{
+  font-weight: 300;
+
+}
 
   a{
     text-decoration: none;
@@ -634,10 +719,10 @@ a{
   .button2{
     width: 7.8vw;
     height: 2.1vw;
+    margin-top: -20px;
     border-radius: 12px;
-    margin: 10px 0;
     padding: 0 1.04vw;
-    font-weight: 800;
+    font-weight: 500;
     font-size: 1.56vw;
     background-color: rgba(49, 156, 255, 1);
     color: #ffffff;
