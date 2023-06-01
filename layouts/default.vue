@@ -145,7 +145,7 @@
     <p class="sans">{{ $t('yazi19') }}</p>
     <p class="sans">{{ $t('yazi20') }}</p>
     <p class="sans">{{ $t('yazi21') }}</p>
-    <p class="sans">{{ $t('yazi22') }}</p>
+    <p class="sans">{{ $t('yazi22_1') }}</p>
   </div>
 </div>
 
@@ -155,6 +155,7 @@
 
 <div class="header2">
   <div class="logo2 reveal fade-left">
+    <p class="sans">{{ $t('yazi22') }}</p>
     <p class="sans">{{ $t('yazi23') }}</p>
     <p class="sans">{{ $t('yazi24') }}</p>
     <p class="sans">{{ $t('yazi25') }}</p>
@@ -295,11 +296,11 @@ function reveal() {
       const boldText = this.$refs.boldText;
       const thinText = this.$refs.thinText;
       if (elementRef === 'boldText') {
-        this.$i18n.locale = 'en'
+        this.$i18n.locale = 'tr'
         boldText.style.fontWeight = '900';
         thinText.style.fontWeight = '300';
       } else if (elementRef === 'thinText') {
-        this.$i18n.locale = 'tr'
+        this.$i18n.locale = 'en'
         thinText.style.fontWeight = '900';
         boldText.style.fontWeight = '300';
       }
@@ -399,7 +400,7 @@ function reveal() {
 
 
 
-.switch2{
+.switch1{
   font-weight: 300;
 
 }

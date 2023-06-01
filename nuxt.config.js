@@ -52,7 +52,7 @@ export default {
     vueI18n: {
       fallbackLocale: 'en',
       messages: {
-        en: {
+        tr: {
           bas1:'Özellikler',
           bas2:'Yardım',
           yazi1: 'Touriple ile',
@@ -76,7 +76,8 @@ export default {
           yazi19: 'için yapay zeka ile internette en çok',
           yazi20: 'kullanılan seyahat uygulamalarını',
           yazi21: 'birleştirerek gerekli herşeyi tek noktada',
-          yazi22: 'topluyor.',
+          yazi22: '',
+          yazi22_1:'topluyor.',
           yazi23: 'Böylelikle gitmek istediğiniz yerleri',
           yazi24: 'barındıran en uygun rotayı bulmak için farklı',
           yazi25: 'yerlerde araştırmaya gerek olmaksızın kendi',
@@ -88,7 +89,7 @@ export default {
           yazi31: 'uygulamalardan alabileceksiniz.',
 
         },
-        tr: {
+        en: {
           bas1:'Features',
           bas2:'Suport',
           yazi1: 'Let Artificial intelligence',
@@ -110,9 +111,10 @@ export default {
           yazi17: 'Why Touriple?',
           yazi18: 'Touriple combines artificial intelligence and ',
           yazi19: 'the most used travel applications to ',
-          yazi20: 'calculate the optimum travel route that',
-          yazi21: 'suits you.',
+          yazi20: 'calculate the optimum travel route that suits',
+          yazi21: 'you.',
           yazi22: 'This way, you create your own tour without ',
+          yazi22_1:'',
           yazi23: 'needing to search on different websites to find ',
           yazi24: 'the most suitable itinerary that includes the ',
           yazi25: 'locations you want. As a result of the',
