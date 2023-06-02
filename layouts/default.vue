@@ -187,7 +187,7 @@
 
 
 <div class="contack" ref="myDiv2">
-  <img class="mailImage" src="~/assets/Vector.png" alt="">
+  <img class="mailImage" src="~/assets/Vector1.png" alt="">
   <p class="h1">Let us contact with you</p>
 
   <input class="inputText" type="text" :placeholder="placeholderText" @focus="removePlaceholder" @blur="addPlaceholder"> <br>
@@ -201,7 +201,6 @@
   <p v-if="!this.savedEmail" class="email-saved">&nbsp;</p>
 
 </div>
-
 
 <br><br><br><br>
 
@@ -259,10 +258,10 @@ function reveal() {
       savedEmail: false,
       isChecked: false,
       checkboxColor: 'red',
-
-
+      hovered: false
     }
   },
+
   beforeDestroy() {
     window.removeEventListener('scroll', this.handleScroll)
   },
@@ -535,19 +534,7 @@ function reveal() {
   z-index: 1;
 }
 
-.h1{
-  font-weight: 600;
-  font-size: 2.6vw;
-  z-index: 1;
-}
-.mailImage{
-  width: 6.25vw;
-  opacity: 20%;
-  position: absolute;
-  margin: -0.52vw -3.125vw;
-  filter: blur(1px);
-  z-index: 1;
-}
+
 
   .background-image{
   width: 100%;
@@ -701,6 +688,41 @@ a{
     z-index: 1;
     position: relative;
   }
+
+  .contack img{
+  width: 6.25vw;
+  opacity: 20%;
+  position: absolute;
+  margin: -0.52vw -3.125vw;
+  filter: blur(1px);
+  z-index: 1;
+  transition: transform 0.3s ease;
+  filter: saturate(0) blur(1px);
+  }
+  .contack .h1{
+  font-weight: 600;
+  font-size: 2.6vw;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+.contack:hover .h1{
+  font-weight: 600;
+  font-size: 2.6vw;
+  z-index: 1;
+  transform: translateY(1vw);
+
+}
+
+  .contack:hover img{
+  opacity: 20%;
+  position: absolute;
+  margin: -0.52vw -3.125vw;
+  filter: blur(0px);
+  z-index: 1;
+  transform: scale(1.4) translateY(-2.5vw);
+  }
+
+
 
 
   .bos2{
